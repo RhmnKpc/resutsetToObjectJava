@@ -19,8 +19,6 @@ public class ConvertResultsetToObject {
 		T row = (T) pObj.newInstance();
 		for (Field field : fields) {
 			field.setAccessible(true);
-			if (field.getName().equals("tableName"))
-				continue;
 			row.getClass().getDeclaredMethod("set" + field.getName(), field.getType()).invoke(row,
 					rs.getObject(field.getName()));
 		}
@@ -37,8 +35,6 @@ public class ConvertResultsetToObject {
 			T row = (T) pObj.newInstance();
 			for (Field field : fields) {
 				field.setAccessible(true);
-				if (field.getName().equals("tableName"))
-					continue;
 				row.getClass().getDeclaredMethod("set" + field.getName(), field.getType()).invoke(row,
 						rs.getObject(field.getName()));
 
