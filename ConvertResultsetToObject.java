@@ -26,7 +26,7 @@ public class ConvertResultsetToObject {
 		return row;
 	}
 	//Liste Olarak döndürür Resultseti while döngüsüne sokmaya gerek yoktur.
-public static <T> Object getObjectList(ResultSet rs, @SuppressWarnings("rawtypes") Class pObj)
+	   public static <T> Object getObjectList(ResultSet rs, @SuppressWarnings("rawtypes") Class pObj)
 			throws SQLException, SecurityException, InstantiationException, IllegalAccessException,
 			IllegalArgumentException, NoSuchFieldException, NoSuchMethodException, InvocationTargetException {
 		Field[] fields = pObj.getDeclaredFields();
