@@ -1,2 +1,2 @@
 # resutsetToObjectJava
-Java Sql den dönen resultseti Nesneye çevirme
+convert jdbc sql query result to object
